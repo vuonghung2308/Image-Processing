@@ -10,12 +10,15 @@ for i in range(x):
     for j in range(y):
         out[i][j] = 20*np.log(1+img[i][j])
 
-# print(img)
 
-# plt.hist(img.ravel(), 256, [0, 256])
-plt.hist(out.ravel(), 256, [0, 256])
+fig, axs = plt.subplots(2)
+axs[0].hist(img.ravel(), 256, [0, 256])
+axs[0].set_title("Ảnh gốc")
+axs[1].hist(out.ravel(), 256, [0, 256])
+axs[1].set_title("Ảnh sau xử lý")
+
 cv.imshow('Truoc', img)
 cv.imshow('Sau', out)
-plt.show()
 
+plt.show()
 cv.waitKey(0)

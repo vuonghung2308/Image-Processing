@@ -1,4 +1,3 @@
-from matplotlib.image import imread
 import numpy as np
 import msvcrt as m
 import cv2 as cv

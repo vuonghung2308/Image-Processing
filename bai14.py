@@ -1,3 +1,4 @@
+from matplotlib import image
 from matplotlib.image import imread
 import numpy as np
 import msvcrt as m
@@ -13,13 +14,12 @@ img = cv.filter2D(img, -1, kernel)
 img = cv.filter2D(img, -1, kernel)
 out1 = cv.filter2D(img, -1, kernel)
 
-out2 = out1 - img
+out2 = img - out1
 
-result = img + out2*1
-
-print(result)
+result = img + out2*2
 
 cv.imshow('Anh goc', img)
-cv.imshow('Anh sau lam min', out2)
+cv.imshow('Sau 1', out2)
+cv.imshow('Sau 2', result)
 
 cv.waitKey(0)

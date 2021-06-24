@@ -38,5 +38,5 @@ for i in range(x):
             out3[i][j] = 0
 
 cv.imshow('Truoc', img)
-cv.imshow('Sau', out3)
+cv.imshow('Sau 2', out3)
 cv.waitKey(0)
