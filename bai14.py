@@ -1,10 +1,8 @@
-from matplotlib import image
-from matplotlib.image import imread
 import numpy as np
-import msvcrt as m
 import cv2 as cv
 
-img = cv.imread('test.jpg', cv.IMREAD_GRAYSCALE)
+org = cv.imread('test.jpg', cv.IMREAD_GRAYSCALE)
+img = np.copy(org)
 kernel = np.array(
     [[1, 2, 1],
      [2, 4, 2],
@@ -16,9 +14,10 @@ out1 = cv.filter2D(img, -1, kernel)
 
 out2 = img - out1
 
-result = img + out2*2
+result = org + out2*1
 
-cv.imshow('Anh goc', img)
+cv.imshow('Anh goc', org)
+cv.imshow('Anh mo', img)
 cv.imshow('Sau 1', out2)
 cv.imshow('Sau 2', result)
 

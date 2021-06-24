@@ -1,6 +1,3 @@
-from matplotlib.image import imread
-import numpy as np
-import msvcrt as m
 import cv2 as cv
 
 img = cv.imread('van.jpg', cv.IMREAD_GRAYSCALE)
@@ -11,6 +8,6 @@ da = cv.morphologyEx(da, cv.MORPH_ERODE, kernel)
 co = cv.morphologyEx(da, cv.MORPH_ERODE, kernel)
 
 cv.imshow('Anh goc', img)
-cv.imshow('Anh sau lam min', co)
+cv.imshow('Anh sau', co)
 
 cv.waitKey(0)

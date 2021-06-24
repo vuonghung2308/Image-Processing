@@ -8,6 +8,6 @@ kernel = cv.getStructuringElement(cv.MORPH_CROSS, (4, 4))
 co = cv.morphologyEx(img, cv.MORPH_DILATE, kernel)
 res = co-img
 cv.imshow('Anh goc', img)
-cv.imshow('Anh sau lam min', res)
+cv.imshow('Anh sau', res)
 
 cv.waitKey(0)

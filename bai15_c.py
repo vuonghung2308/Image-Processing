@@ -12,6 +12,7 @@ mo = cv.morphologyEx(co, cv.MORPH_ERODE, kernel)
 do = cv.morphologyEx(da, cv.MORPH_DILATE, kernel)
 
 cv.imshow('Anh goc', img)
-cv.imshow('Anh sau lam min', do)
+cv.imshow('Anh sau khi dong', do)
+cv.imshow('Anh sau khi mo', mo)
 
 cv.waitKey(0)
